@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: idf_test_zadanie
+  datasource:
+    url: jdbc:postgresql://localhost:5432/idf_bank_test
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    locations: classpath:db/migration
+    enabled: true
